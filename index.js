@@ -11,7 +11,6 @@ app.get("/ig",(req,res) => {
   ig(link).then(result => {
     res.json(result)
     console.log(result)
-  cheerio.load()
   }).catch(err => {
     console.error("Error")
     res.send("error")
