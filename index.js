@@ -3,7 +3,7 @@ const app = express();
 const ig = require("ig-unduh");
 
 app.get("/",(req,res)=>{
-  res.send("<h1>Instagram dawnloder</h1>")
+  res.send("<h1>Instagram API</h1>")
 });
 
 app.get("/ig",(req,res) => {
@@ -11,5 +11,11 @@ app.get("/ig",(req,res) => {
   ig(link).then(result => {
     res.json(result)
     console.log(result)
+  }).catch(err => {
+    console.error("Error")
+    res.send("error")
   });
+});
+app.listen(4100,()=>{
+  console.log("Server Runing ...")
 });
