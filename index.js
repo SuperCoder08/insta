@@ -12,8 +12,7 @@ app.get("/ig",(req,res) => {
     res.json(result)
     console.log(result)
   }).catch(err => {
-    console.error("Error")
-    res.send("error")
+    
   });
 });
 app.listen(4100,()=>{
